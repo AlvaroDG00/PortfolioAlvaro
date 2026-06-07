@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
 import WelcomeSplash from './components/WelcomeSplash';
 import Hero from './components/Hero';
@@ -28,7 +29,8 @@ export default function App() {
         <Missions />
         <CallingCard />
       </main>
-      
+
+      <Analytics />
     </div>
   )
 }
