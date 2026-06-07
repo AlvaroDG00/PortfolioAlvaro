@@ -4,24 +4,25 @@ export default function PersonaButton({ text, onClick }) {
   return (
     <motion.button
       onClick={onClick}
-      // Clases base: texto blanco, fondo negro, borde blanco
-      className="relative px-8 py-3 mx-2 text-xl font-black uppercase tracking-widest text-white bg-black border-2 border-white cursor-pointer select-none"
-      // Inclinación por defecto
+      // En móvil ocupa todo el ancho (w-full), en PC se ajusta a su contenido (md:w-auto)
+      className="relative px-6 md:px-8 py-3 w-full md:w-auto text-lg md:text-xl font-black uppercase tracking-widest text-white bg-black border-2 border-white cursor-pointer select-none"
       style={{ transform: "skewX(-15deg)" }}
-      // Animación al pasar el ratón (Hover)
       whileHover={{
         scale: 1.1,
-        skewX: -5, // Se endereza un poco de golpe
-        backgroundColor: "#D31111", // Pasa a rojo
-        color: "#000000", // Texto pasa a negro
+        skewX: -5,
+        backgroundColor: "#D31111",
+        color: "#000000",
         borderColor: "#000000",
         transition: { type: "spring", stiffness: 400, damping: 10 }
       }}
-      // Animación al hacer clic
-      whileTap={{ scale: 0.9 }}
+      // Reacción inmediata y agresiva al tocar la pantalla con el dedo
+      whileTap={{ 
+        scale: 0.95,
+        skewX: -5,
+        backgroundColor: "#D31111",
+        color: "#000000",
+      }}
     >
-      {/* Contenedor interno del texto para contrarrestar visualmente la inclinación si se desea, 
-          aunque en este estilo dejamos que el texto fluya con el corte */}
       <span className="block">{text}</span>
     </motion.button>
   );

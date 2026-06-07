@@ -43,7 +43,8 @@ export default function CallingCard() {
 
       {/* Texto gigante de fondo decorativo */}
       <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none select-none overflow-hidden">
-        <span className="text-[15rem] font-black text-black -rotate-12 leading-none whitespace-nowrap">
+        {/* Ajustado el texto de 15rem a 6rem en móvil */}
+        <span className="text-[6rem] md:text-[15rem] font-black text-black -rotate-12 leading-none whitespace-nowrap">
           CALLING CARD
         </span>
       </div>

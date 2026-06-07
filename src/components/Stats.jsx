@@ -37,7 +37,7 @@ export default function Stats() {
   return (
     // Fondo con un patrón visual o simplemente un gris roto, usaremos un blanco hueso para máximo contraste
     <section className="relative min-h-screen bg-zinc-100 px-6 py-24 flex flex-col items-center overflow-hidden">
-      
+
       {/* Título de la sección rotado */}
       <motion.div
         initial={{ scale: 0, rotate: 10 }}
@@ -51,7 +51,7 @@ export default function Stats() {
       </motion.div>
 
       {/* Contenedor de las categorías */}
-      <motion.div 
+      <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -59,7 +59,7 @@ export default function Stats() {
         className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 items start"
       >
         {skillCategories.map((category, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             variants={itemVariants}
             className={`p-8 border-4 shadow-[8px_8px_0px_#000] ${category.color} flex flex-col`}
@@ -72,8 +72,8 @@ export default function Stats() {
             {/* Etiquetas de habilidades */}
             <div className="flex flex-wrap gap-3 mt-8">
               {category.skills.map((skill, sIndex) => (
-                <span 
-                  key={sIndex} 
+                <span
+                  key={sIndex}
                   className="font-bold text-lg px-3 py-1 border-2 border-current bg-opacity-10 backdrop-blur-sm -skew-x-12 hover:scale-110 hover:-skew-x-6 transition-transform cursor-default"
                 >
                   {skill}
@@ -85,7 +85,7 @@ export default function Stats() {
       </motion.div>
 
       {/* Elemento de fondo decorativo gigante */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20rem] font-black text-black opacity-5 pointer-events-none -rotate-12 select-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[8rem] md:text-[20rem] font-black text-black opacity-5 pointer-events-none -rotate-12 select-none">
         SKILLS
       </div>
 
