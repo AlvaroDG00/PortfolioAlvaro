@@ -62,7 +62,7 @@ export default function Missions() {
           <div className="w-full md:w-auto">
             <PersonaButton
               text="Check repository"
-              onClick={() => window.open("https://github.com/AlvaroDG00", "_blank")}
+              onClick={() => window.open("https://github.com/AlvaroDG00/CAFES_APP", "_blank")}
             />
           </div>
           <div className="w-full md:w-auto">
